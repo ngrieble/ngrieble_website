@@ -2,36 +2,22 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import {GamepadIcon, CakeIcon, HeartIcon, VolleyballIcon, TrophyIcon, PawPrintIcon} from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
-import { Geist, Geist_Mono } from "next/font/google"
 import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react"
 import {SiteFooter} from "@/components/site-footer";
 import * as React from "react";
+import {Gallery} from "@/components/ui/gallery";
 
 // Baking images
 const bakingImages = [
-  { src: "/donuts.jpg", alt: "Homemade donuts" },
-  { src: "/danish.jpg", alt: "Cheese and cherry danish" },
-  { src: "/buns.jpg", alt: "Fresh cinnamon rolls" },
-  { src: "/rolls.jpg", alt: "Fresh dinner rolls" },
+  { src: "/baking/donuts.jpg", alt: "Homemade donuts" },
+  { src: "/baking/danish.jpg", alt: "Cheese and cherry danish" },
+  { src: "/baking/buns.jpg", alt: "Fresh cinnamon rolls" },
+  { src: "/baking/pancake.jpg", alt: "Danish pancake" },
 ]
 
 export default function AboutPage() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  // Add auto-sliding effect
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        prevIndex === bakingImages.length - 1 ? 0 : prevIndex + 1
-      )
-    }, 3000) // Changes every 3 seconds
-
-    return () => clearInterval(timer)
-  }, [])
-  
   return (
-    <div className={`${geistSans.className} ${geistMono.className} min-h-screen`}>
+    <div className={`min-h-screen`}>
       <SiteHeader />
       <div className="py-8">
         {/* Page Introduction */}
@@ -187,27 +173,7 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="relative w-full h-64 rounded-md overflow-hidden">
-                <Image
-                  src={bakingImages[currentImageIndex].src}
-                  alt={bakingImages[currentImageIndex].alt}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="hover:scale-105 transition-transform duration-500"
-                />
-                
-                {/* Navigation dots */}
-                <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
-                  {bakingImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`w-2 h-2 rounded-full transition-colors cursor-pointer ${
-                        index === currentImageIndex ? 'bg-white' : 'bg-white/50'
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
+                <Gallery images={bakingImages}></Gallery>
               </div>
               <CardDescription>
                 My sister and mom are my baking inspirations — I’m always trying out their recipe recommendations. While I
@@ -224,13 +190,3 @@ export default function AboutPage() {
     </div>
   )
 }
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})

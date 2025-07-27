@@ -2,14 +2,15 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import {
-  NavigationMenu, NavigationMenuContent,
+  NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList, NavigationMenuTrigger,
+  NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import {InstagramIcon, LinkedinIcon, PalmtreeIcon, SunIcon, TentTreeIcon, YoutubeIcon} from "lucide-react";
+import {InstagramIcon, LinkedinIcon, YoutubeIcon} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import {MobileNav} from "@/components/mobile-nav";
 
 export function SiteHeader() {
   return (
@@ -20,7 +21,7 @@ export function SiteHeader() {
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative w-12 h-12">
               <Image
-                  src="/logo1.png"
+                  src="/logo.png"
                   alt="Logo"
                   fill
                   className="object-contain"
@@ -41,31 +42,9 @@ export function SiteHeader() {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Travel</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-4">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <Link href="https://www.youtube.com/watch?v=lJlfXWPFasc" target="_blank" className="flex-row items-center gap-2">
-                          <PalmtreeIcon />
-                          Bora Bora
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link href="https://www.youtube.com/watch?v=KNU61m871DQ" target="_blank" className="flex-row items-center gap-2">
-                          <SunIcon />
-                          Hawaii
-                        </Link>
-                      </NavigationMenuLink>
-                      <NavigationMenuLink asChild>
-                        <Link href="https://www.youtube.com/watch?v=SWf2slNX2zU" className="flex-row items-center gap-2">
-                          <TentTreeIcon />
-                          Alaska
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href="/travel">Travel</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
@@ -121,24 +100,7 @@ export function SiteHeader() {
         {/* Mobile navigation */}
         <div className="md:hidden">
           {/* We can add a mobile menu button here */}
-          <button className="p-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </button>
+          <MobileNav />
         </div>
       </div>
     </header>

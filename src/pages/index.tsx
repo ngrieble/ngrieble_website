@@ -1,27 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site-header";
-import {BriefcaseIcon, CircleUserIcon, YoutubeIcon} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import {BriefcaseIcon, CircleUserIcon, PlaneIcon} from "lucide-react";
 import * as React from "react";
 import {SiteFooter} from "@/components/site-footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export default function Home() {
   return (
-    <div className={`${geistSans.className} ${geistMono.className} min-h-screen`}>
+    <div className={`min-h-screen`}>
       <SiteHeader />
       <div className="flex flex-col items-center justify-center min-h-[calc(100vh-3.5rem)] p-8">
         <Card className="w-full max-w-4xl">
@@ -60,16 +48,9 @@ export default function Home() {
               <Button asChild variant="outline" size="lg" className="text-foreground">
                 <Link href="/experience"><BriefcaseIcon />My Experience</Link>
               </Button>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button asChild variant="outline" size="lg" className="text-foreground">
-                    <Link href="https://www.youtube.com/playlist?list=PLvxgUTi28gGZm-m7svrYCrlNOLZIJ_9Ts" target="_blank" ><YoutubeIcon />Travel Stories</Link>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>My Youtube Travel Vlogs</p>
-                </TooltipContent>
-              </Tooltip>
+              <Button asChild variant="outline" size="lg" className="text-foreground">
+                <Link href="/travel"><PlaneIcon />Travel Stories</Link>
+              </Button>
             </div>
           </CardContent>
         </Card>

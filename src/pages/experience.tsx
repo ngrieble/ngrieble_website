@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google"
 import { SiteHeader } from "@/components/site-header"
 import {
   Accordion,
@@ -11,16 +10,6 @@ import { Progress } from "@/components/ui/progress"
 import { Card, CardContent } from "@/components/ui/card"
 import {SiteFooter} from "@/components/site-footer";
 import * as React from "react";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 const experiences = [
   {
@@ -126,7 +115,7 @@ const skills = [
 
 export default function ExperiencePage() {
   return (
-    <div className={`${geistSans.className} ${geistMono.className} min-h-screen`}>
+    <div className={`min-h-screen`}>
       <SiteHeader />
       <main className=" max-w-4xl mx-auto py-12">
         {/* Page Introduction */}
