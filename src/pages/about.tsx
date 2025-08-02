@@ -53,8 +53,8 @@ export default function AboutPage() {
               <CardDescription className="text-sm">
                 My partner-in-crime, best friend, and the one who keeps me laughing through it all. He helped me build
                 my first gaming PC, which sparked my love for video games. I returned the favor by inspiring his love
-                for travel — and dragging him all over the world. We met at the University of Michigan and tied the
-                knot in May 2025 with our dream wedding.
+                for travel — and dragging him all over the world. We met at the University of Michigan in 2014 and tied
+                the knot in May 2025 with our dream wedding.
               </CardDescription>
             </CardContent>
           </Card>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 />
               </div>
               <CardDescription>
-                Our lovable Australian Labradoodle, Valkyrie joined the family in October 2025 and quickly stole our
+                Our lovable Australian Labradoodle, Valkyrie joined the family in October 2022 and quickly stole our
                 hearts. She’s incredibly smart and has a way of charming everyone (and getting her way) with those big,
                 brown eyes. Always full of energy, she loves to play and run as fast as she can — bringing joy and a
                 little bit of chaos wherever she goes.
@@ -100,8 +100,8 @@ export default function AboutPage() {
                 builders and simulation games, and I’ll try just about any indie title that catches my eye. Some games
                 I’ve sunk countless hours into include Oxygen Not Included, Stardew Valley, The Sims, and Apex Legends
                 (usually with my husband). A few all-time favorites are The Last of Us, Hollow Knight, and the entire
-                Nancy Drew series — a nostalgic classic I’ll never quit. I also have a soft spot for offbeat indie
-                games, with recent favorites like Dredge, The Roottrees Are Dead, Strange Horticulture, and Cult of the Lamb.
+                Nancy Drew series — a nostalgic classic I’ll never quit. I also have a soft spot for indie games, with
+                recent favorites like Dredge, The Roottrees Are Dead, Strange Horticulture, and Cult of the Lamb.
               </CardDescription>
               <Button asChild variant="outline" className="w-full text-foreground">
                 <a href="https://steamcommunity.com/id/ngoblue/" target="_blank" rel="noopener noreferrer">
