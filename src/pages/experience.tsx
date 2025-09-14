@@ -20,7 +20,7 @@ const experiences = [
     years: "2021 - Present",
     overview: "Led engineering operations and strategic initiatives across multiple product spaces, focusing on team growth, system reliability, and technical innovation.",
     achievements: [
-      "Lead a team of 60+ engineers, including five senior engineering managers, focusing on career development, promotion planning, and managing performance",
+      "Lead ~60 engineers across Seattle, San Francisco, and Austin (React, Kotlin, iOS, Android, infrastructure), including five Engineering Managers and a Principal Engineer.",
       "Designed and implemented a flexible staffing model, enabling dynamic project scaling and aligning engineers with growth opportunities",
       "Spearheaded the unification of Expedia's shopping stacks, integrating smaller lines of business into the lodging stack to accelerate feature delivery",
       "Articulated impact metrics with product partners and presented technical proposals to senior leadership, including the CEO",
@@ -34,7 +34,11 @@ const experiences = [
     company: "Expedia Group",
     years: "2019 - 2021",
     overview: "Managed multiple engineering teams focusing on cloud infrastructure and DevOps. Reduced deployment time by 60% through implementation of CI/CD pipelines. Led the migration to cloud-native architecture.",
-    achievements: []
+    achievements: [
+        "Managed 3 teams (~25 developers) across Seattle & San Francisco.",
+        "Established a foundational engineering squad focusing on operational excellence and core infrastructure improvements.",
+        "Architected an attribute-based dynamic pricing system projected at $10M+ revenue."
+    ]
   },
   {
     id: "senior-engineer",

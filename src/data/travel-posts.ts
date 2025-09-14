@@ -16,7 +16,15 @@ export const travelPostsByYear: TravelPostByYear[]    = [
                 thumbnails:
                     [
                         {
-                            src: "/travel/alaska.jpg",
+                            src: "/travel/alaska/alaska.jpg",
+                            alt: ""
+                        },
+                        {
+                            src: "/travel/alaska/alaska-2.jpg",
+                            alt: ""
+                        },
+                        {
+                            src: "/travel/alaska/alaska-3.jpg",
                             alt: ""
                         }
                     ]
@@ -33,7 +41,7 @@ export const travelPostsByYear: TravelPostByYear[]    = [
                 thumbnails:
                     [
                         {
-                            src: "/travel/new-york.jpg",
+                            src: "/travel/new_york/new-york.jpg",
                             alt: ""
                         }
                     ]
@@ -81,7 +89,7 @@ export const travelPostsByYear: TravelPostByYear[]    = [
                 thumbnails:
                     [
                         {
-                            src: "/travel/hawaii.jpg",
+                            src: "/travel/hawaii/hawaii.jpg",
                             alt: ""
                         }
                     ]

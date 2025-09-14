@@ -14,6 +14,7 @@ export interface FoodRecommendation {
 
 export interface Excursion {
     title: string
+    subtitle?: string
     description: string
     images?: {
         src: string

@@ -4,6 +4,8 @@ import { TravelPageData } from "@/types/travel-page"
 import Image from "next/image"
 import {LightbulbIcon, UtensilsIcon, MapIcon, CameraIcon, VideoIcon} from "lucide-react"
 import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
+import {FullscreenImage} from "@/components/ui/fullscreen-image";
+import {Gallery} from "@/components/ui/gallery";
 
 export function TravelPageTemplate({ data }: { data: TravelPageData }) {
   return (
@@ -118,19 +120,23 @@ export function TravelPageTemplate({ data }: { data: TravelPageData }) {
           <div className="space-y-6">
             {data.excursions.map((excursion, index) => (
               <div key={index} className="space-y-4">
-                <h3 className="font-medium">{excursion.title}</h3>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-medium group-hover:text-primary">
+                    {excursion.title}
+                  </h3>
+                  {excursion.subtitle && (
+                    <span className="text-sm text-muted-foreground">
+                      {excursion.subtitle}
+                    </span>
+                  )}
+                </div>
                 <p className="text-muted-foreground">{excursion.description}</p>
                 {excursion.images && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {excursion.images.map((image, imgIndex) => (
-                      <AspectRatio key={imgIndex} ratio={4 / 3}>
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          fill
-                          className="rounded-md object-cover"
-                        />
-                      </AspectRatio>
+                        <AspectRatio key={imgIndex} ratio={4 / 3}>
+                          <FullscreenImage src={image.src} alt={image.alt} />
+                        </AspectRatio>
                     ))}
                   </div>
                 )}

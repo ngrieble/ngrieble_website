@@ -19,17 +19,17 @@ const exampleData = {
             name: "Spago - Four Seasons Resort",
             description: "Eight of the best ramen shops in Tokyo, all in one place.",
             images: [
-                { src: "/travel/spago.jpg", alt: "Spago Pasta" },
-                { src: "/travel/spago-2.jpg", alt: "Spago Souffle" },
-                { src: "/travel/spago-3.jpg", alt: "Spago Fish" },
+                { src: "/travel/hawaii/spago.jpg", alt: "Spago Pasta" },
+                { src: "/travel/hawaii/spago-2.jpg", alt: "Spago Souffle" },
+                { src: "/travel/hawaii/spago-3.jpg", alt: "Spago Fish" },
             ]
         },
         {
             name: "Fleetwood's on Front St.",
             description: "Eight of the best ramen shops in Tokyo, all in one place.",
             images: [
-                { src: "/travel/fleetwoods.jpg", alt: "Fleetwood Tacos" },
-                { src: "/travel/fleetwoods-1.jpg", alt: "Fleetwood Burgers" }
+                { src: "/travel/hawaii/fleetwoods.jpg", alt: "Fleetwood Tacos" },
+                { src: "/travel/hawaii/fleetwoods-1.jpg", alt: "Fleetwood Burgers" }
             ]
         },
     ],
@@ -42,10 +42,6 @@ const exampleData = {
             title: "Road to Hana Self-Guided Tour",
             description: "Shaka Guide",
         },
-    ],
-    additionalPhotos: [
-        { src: "/travel/japan/photo1.jpg", alt: "Cherry Blossoms in Ueno Park" },
-        // ... more photos
     ]
 }
 
